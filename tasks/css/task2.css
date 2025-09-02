@@ -1,0 +1,116 @@
+:root{
+    --my-fixed-size: 150px;
+    --light-blue: rgb(221, 235, 248);
+    --dark-blue: rgb(79, 86, 202);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,p{
+    font-family: 'teshrin'
+}
+@font-face {
+    font-family: 'teshrin';
+    src: url('../statics/fonts/TeshrinAR+LT-Bold.otf');
+}
+@font-face {
+    font-family: 'lalezar';
+    src: url('../statics/fonts/Digi\ Lalezar\ Plus.ttf');
+}
+
+
+.parent{
+
+    background-color: rgb(249, 249, 249);
+    width: 380px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px 0px;
+    margin: 100px auto;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.318);
+
+    transition: all 0.4s;
+    
+
+}
+
+.parent:hover{
+    scale: 1.01;
+    box-shadow: 8px 8px 10px 10px rgba(0, 0, 0, 0.318);
+
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 20px 0px;
+    
+   
+}
+
+.price-tag{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.title{
+    font-size: 25px;
+    margin: 35px;
+}
+
+.price h1{
+    font-size: 45px;
+}
+
+.options{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: end;
+    margin: 20px 0px;
+}
+
+.options p{
+    direction: rtl;
+    font-size: x-large;
+}
+
+.submit{
+    background-color: var(--light-blue);
+    /* margin: 20px 0px 0px 0px; */
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    color: var(--dark-blue);
+    text-decoration: none;
+
+    transition: all 0.4s;
+}
+
+.submit:hover{
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+}
+
+
+.monthly{
+    color: var(--dark-blue);
+}
+
+.alarm{
+    width: 50px;
+    height: 50px;
+    color: aqua;
+}
