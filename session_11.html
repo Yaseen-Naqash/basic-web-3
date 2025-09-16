@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            min-width: 150px;
+            height: 150px;
+            background-color: green;
+
+            transition: all 1s;
+
+        }
+
+        .box2{
+            min-width: 150px;
+            height: 150px;
+            background-color: red;
+
+            transition: all 1s;
+
+        }
+        .box:hover ~ .box2{
+            background-color: yellow;
+        }
+        .parent{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-y: scroll;
+            gap: 10px;
+            width: 700px;
+        }
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            position: relative;
+
+        }
+        nav a{
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            
+        }
+
+        .prodcut-box{
+            position: absolute;
+            left: 390px;
+            top: 100px;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 1s;
+            opacity: 0;
+
+        }
+
+        .prodcut-link:hover ~ .prodcut-box{
+            opacity: 1;
+        }
+
+        .blue{
+            background-color: blue;
+            color: aliceblue;
+            border: 3px solid blueviolet;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="box"></div>
+        <div class="box2"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <nav>
+        <a href="">home</a>
+        <a href="" class="prodcut-link">products</a>
+        <a href="">other sites</a>
+        <a href="">about us</a>
+        <a href="">login</a>
+
+        <div class="prodcut-box">
+            this is a small prodcut list
+        </div>
+
+
+    </nav>
+
+
+
+
+    
+</body>
+</html>
