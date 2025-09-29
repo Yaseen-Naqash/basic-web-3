@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            background-color: green;
+            width: 150px;
+            height: 80px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            padding: 15px;
+
+            overflow: hidden;
+
+            transition: all 0.5s;
+        }
+
+        .box-open{
+            height: 400px;
+        }
+
+        a{
+            color: aliceblue;
+            font-size: larger;
+            text-decoration: none;
+        }
+
+        .window{
+            background-color: red;
+            width: 500px;
+            height: 500px;
+            
+
+            position: absolute;
+            left: 750px;
+            top: 200px;
+            gap: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .customized{
+            background-color: green;
+   
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="box" id="mybox">
+        <h1>menu</h1>
+
+        <a href="">test 1</a>
+        <a href="">test 2</a>
+        <a href="">test 3</a>
+        <a href="">test 4</a>
+    </div>
+
+
+
+   
+
+
+    <button onclick="open_window()">
+        open window
+    </button>
+
+
+    <div class="window customized" id="mywindow">
+        <h1>welcome to my website</h1>
+
+        <button onclick="class_changes()">change window</button>
+        <button onclick="close_window()">close window</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

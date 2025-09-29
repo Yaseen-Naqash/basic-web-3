@@ -142,11 +142,12 @@ header a{
     justify-content: space-between;
     align-items: center;
 }
-.product a{
+.product .mybutton{
     color: white;
     background-color: var(--blue);
     padding: 8px 15px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .title{
     color: var(--blue);
@@ -265,8 +266,7 @@ footer .top-row{
 
 @media (min-width: 1270px) {
 
-    .services{
-
+    .services{  
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
@@ -285,4 +285,22 @@ footer .top-row{
 
     }
     
+}
+
+
+.window{
+
+    display: none;
+    position: fixed;
+    left: 730px;
+    top: 200px;
+
+    scale: 1.7;
+
+    background-color: white;
+}
+
+.window-open{
+    display: flex;
+
 }
