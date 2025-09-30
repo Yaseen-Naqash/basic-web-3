@@ -25,7 +25,7 @@ nav{
     
     padding: 15px 40px;
 
-
+    position: relative;
 
     display: flex;
     flex-direction: row;
@@ -69,6 +69,9 @@ nav a{
 
     transition: all 0.5s;
     
+}
+.nav-links{
+    width: fit-content;
 }
 .nav-links:hover .line{
     width: 100%;
@@ -299,8 +302,54 @@ footer .top-row{
 
     background-color: white;
 }
-
 .window-open{
     display: flex;
-
+}
+.mobile-menu-button{
+    display: none;
+    rotate: 90deg;
+    scale: 2.5;
+    cursor: pointer;
+}
+.mobile-menu h1{
+    color: var(--blue);
+}
+.mobile-menu{
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 4px 4px 20px 20px rgba(0, 0, 0, 0.484);
+    position: fixed;
+    top: 0;
+    left: -500px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.5s;
+}
+.mobile-menu-open{
+    left: 0px;
+}
+.mobile-menu-button-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--orange);
+    scale: 2;
+    cursor: pointer;
+}
+@media (max-width: 710px) {
+    .links{  
+        display: none;
+    }
+    .login-sign-up{
+        display: none;
+    }
+    .mobile-menu-button{
+        display: block;
+    }
+    .mobile-menu{
+        display: flex;
+    }
 }
