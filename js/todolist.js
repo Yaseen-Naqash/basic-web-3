@@ -92,6 +92,12 @@ function loadTodos() {
   const todos =  JSON.parse(todosString) || [];
 
   todoList.innerHTML = '';
+
+  // for todo in todos:
+  //   const li = document.createElement('li');
+
+  //   li.textContent = todo
+  
   todos.forEach((todo, index) => {
     const li = document.createElement('li');
     li.textContent = todo;
@@ -241,5 +247,24 @@ window.onclick = function (event) {
 
 
 
+let integer = 12
 
+let boolean = false
 
+let list = ['bannana', 'apple', 'cherry']
+
+let x = 'hello world'
+
+let string = "['bannana', 'apple', 'cherry']"
+
+let output =  JSON.stringify(list)
+
+localStorage.setItem('test' , output)
+
+ let y = localStorage.getItem('test')
+
+ console.log(y[1])
+
+ y = JSON.parse(y)
+
+  console.log(y[1])
