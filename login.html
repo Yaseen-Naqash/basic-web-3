@@ -18,17 +18,63 @@
     <main>
         <section>
             <h1>Login</h1>
-            <form action="">
-                <input type="text" placeholder="username">
+            <form action="" id="myform">
+                <input type="text" placeholder="username" id="username">
                 <br>
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password" id="password">
                 <br>
                 <button>Login!</button>
+                <p id="error-box"></p>
                 <p>You dont have a Account?! <a href="register.html">Click Here!</a></p>
 
             </form>
         </section>
     </main>
-    
+
+  
+    <!--
+    1- length between 5 and 15 characters
+    2- username should starts with @
+    3- english
+    4- can contain _ after atleast 1 character but not at its end
+
+    1- password should be at least 8 characters and no more than 20
+    2- atleast one uppercase letter
+    3- atleast on lowercase letter
+    4- atleast on digit 
+    5- at least one special character 
+    -->
+
+    <script>
+        let username_regex = /^@[a-zA-Z][a-zA-Z0-9_]{3,13}[a-zA-Z0-9]$/
+        let password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,20}$/
+
+        let errorBox = document.getElementById('error-box')
+        let myform = document.getElementById('myform')
+        myform.addEventListener('submit', function (e) {
+            let username = document.getElementById('username').value
+            let password = document.getElementById('password').value
+            e.preventDefault()
+
+            if (!username || !password){
+                errorBox.textContent = 'please fill in all fields'
+                errorBox.style.color = 'red'
+            }
+            else if (!username_regex.test(username)){
+                errorBox.textContent = 'username is invalid'
+                errorBox.style.color = 'red'
+            }
+            else if (!password_regex.test(password)){
+                errorBox.textContent = 'password is invalid'
+                errorBox.style.color = 'red'
+            }
+            else{
+                errorBox.textContent = 'your data is valid'
+                errorBox.style.color = 'green'
+            }
+        })
+
+
+    </script>
 </body>
 </html>

@@ -14,6 +14,7 @@ else if (a == 15) {
 else {
     console.log('a was lesser')
 }
+
 e.forEach(fruit => {
     console.log(fruit)
 });

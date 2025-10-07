@@ -290,32 +290,7 @@
             <div class="todo">
                 <strong>TODO:</strong> Implement the following functions in the script section below
             </div>
-            <pre>
-// Set a key-value pair in localStorage
-function setItem(key, value) {
-    // TODO: Implement this function
-}
 
-// Get a value from localStorage by key
-function getItem(key) {
-    // TODO: Implement this function
-}
-
-// Remove an item from localStorage by key
-function removeItem(key) {
-    // TODO: Implement this function
-}
-
-// Clear all items from localStorage
-function clearStorage() {
-    // TODO: Implement this function
-}
-
-// Display all items in localStorage
-function displayStorage() {
-    // TODO: Implement this function
-}
-            </pre>
         </section>
     </div>
 
@@ -341,8 +316,8 @@ function displayStorage() {
 
         // Event Handler Functions
         function handleSetItem() {
-            const key = keyInput.value.trim();
-            const value = valueInput.value.trim();
+            const key = keyInput.value
+            const value = valueInput.value
             
             if (!key) {
                 outputDisplay.textContent = "Error: Please enter a key";
@@ -400,25 +375,27 @@ function displayStorage() {
         // Set a key-value pair in localStorage
         function setItem(key, value) {
             // TODO: Implement this function
-            // Use localStorage.setItem()
+            localStorage.setItem(key,value)
         }
 
         // Get a value from localStorage by key
         function getItem(key) {
             // TODO: Implement this function
-            // Use localStorage.getItem()
+            return localStorage.getItem(key)
+            
         }
 
         // Remove an item from localStorage by key
         function removeItem(key) {
             // TODO: Implement this function
-            // Use localStorage.removeItem()
+            
+            localStorage.removeItem(key)
         }
 
         // Clear all items from localStorage
         function clearStorage() {
             // TODO: Implement this function
-            // Use localStorage.clear()
+            localStorage.clear()
         }
 
         // Display all items in localStorage
@@ -427,6 +404,9 @@ function displayStorage() {
             // Loop through localStorage and display all key-value pairs
             // Use Object.keys(localStorage) to get all keys
         }
+
+
     </script>
+    
 </body>
 </html>

@@ -150,6 +150,7 @@ addTodoBtn.addEventListener('click', addTodo);
 todoInput.addEventListener('keypress', e => {
   if (e.key === 'Enter') addTodo();
 });
+
 loadTodos();
 
 // ==== THEME TOGGLE ====
@@ -178,8 +179,12 @@ if (localStorage.getItem('theme') === 'dark') {
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', function (e) {
-  e.preventDefault();
+
+
+
+contactForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   if (!name || !email) {
@@ -268,3 +273,17 @@ localStorage.setItem('test' , output)
  y = JSON.parse(y)
 
   console.log(y[1])
+
+
+let j = "Helloworld23@snappp.ir" 
+
+const regex = /^[^\s@]+@snapp\.ir$/
+
+
+if (regex.test(j)){
+  console.log("its ok")
+
+}
+else {
+  console.log("its not ok")
+}
